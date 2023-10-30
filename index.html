@@ -10,115 +10,96 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous">
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" /> 
+    <link rel="stylesheet" href="src/styles.css" /> 
     
     <title>Weather App</title>
   </head>
   <body>
-     <div class="container">
-      <div class="weather-app-wrapper">
-      <div class="weather-app">
-        <div class="overview">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
-            </div>
-          </div>
-        </form>
-        <h1 id="city">
-          Durban, South Africa
-        </h1>
-        <ul>
-          <li id="date">
-Wednesday:10:20
-          <li>
-            Partly Cloudy
-          </li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="Cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="float-left">
-                <span class="temperature" id="temperature">19</span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                     
-                </span>
+    <div class="container">
+      <div class="weather-app-wrapper" id="weather-app-wrapper">
+        <div class="weather-app" id="weather-app" style="background-color: rgba(106, 205, 241, 0.8);">
+          <form id="seacrh-form" class="mb-3">
+            <div class="row">
+              <div class="col-10">
+                <input type="search" placeholder="Enter city..." class="form-control" id="city-input" autocomplete="off" autofocus="">
+              </div>
+              <div class="col-2">
+                <input type="submit" value="Search" class="btn btn-primary">
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>
-                Precipitation: 0%
-              </li>
-              <li>
-                Humidity: 77%
-              </li>
-              <li>
-                Wind: 8 km/h
-              </li>
-            </ul>
+          </form>
+          <h1 id="city">Durban</h1>
+          <div class="row">
+            <div class="col-5">
+              <div class="d-flex temperature-display">
+                <img src="./WEaTHER-APP-1_files/clear-sky-day.png" alt="clear sky" id="icon">
+                <strong id="temperature">31</strong><span class="units"> °C </span>
+              </div>
+            </div>
+            <div class="col-3" id="col-position">
+              <ul class="weather-additions">
+                <li>Humidity: <span id="humidity">16</span>%</li>
+                <li>Wind: <span id="wind">11</span>km/h</li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <div class="weather"><li>Weather</li></div>
+                <div id="day-and-time">Tuesday 16:32</div>
+                <div class="day-description" id="description">clear sky</div>
+              </ul>
+            </div>
+            <div class="weather-forecast" id="forecast"><div class="row"><div class="col-2">
+          <div class="weather-forecast-day">Tue</div>
+          <img src="./WEATHER-APP-1_files/clear-sky-day.png" alt="clear-sky-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">31°</span>
+            <span class="forecast-min">18°</span>
           </div>
         </div>
-      </div>
-    </div>
-                </span>
-              </div>
-            </div>
+        <div class="col-2">
+          <div class="weather-forecast-day">Wed</div>
+          <img src="./WEATHER-APP-1_files/clear-sky-day.png" alt="clear-sky-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">31°</span>
+            <span class="forecast-min">16°</span>
           </div>
-
-            
-      </br>
-    <div class="row">
-        <div class="col day">Sat</div>
-        <div class="col day">Sun</div>
-        <div class="col day">Mon</div>
-        <div class="col day">Tues</div>
-        <div class="col day">Wed</div>
-    </br>
-   </div>
-        
+        </div>
+        <div class="col-2">
+          <div class="weather-forecast-day">Thu</div>
+          <img src="./WEATHER-APP-1_files/clear-sky-day.png" alt="clear-sky-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">31°</span>
+            <span class="forecast-min">16°</span>
           </div>
-          <div class="row">
-              <div class="col symbol">🌥️</div>
-              <div class="col symbol">⛈️</div>
-              <div class="col symbol">☀️</div>
-              <div class="col symbol">☀️</div>
-              <div class="col symbol">☀️</div>
+        </div>
+        <div class="col-2">
+          <div class="weather-forecast-day">Fri</div>
+          <img src="./WEATHER-APP-1_files/rain-day.png" alt="rain-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">33°</span>
+            <span class="forecast-min">20°</span>
           </div>
-        </br>
-              <div class="row">
-                  <div class="col deg">21°/<strong>30°</strong></div>
-                  <div class="col deg">19°/<strong>23°</strong></div>
-                  <div class="col deg">18°/<strong>29°</strong></div>
-                  <div class="col deg">17°/<strong>29°</strong></div>
-                  <div class="col deg">16°/<strong>27°</strong></div>
-                  
-              </div> 
-
-    </div>
+        </div>
+        <div class="col-2">
+          <div class="weather-forecast-day">Sat</div>
+          <img src="./WEATHER-APP-1_files/rain-day.png" alt="rain-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">30°</span>
+            <span class="forecast-min">17°</span>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="weather-forecast-day">Sun</div>
+          <img src="./WEATHER-APP-1_files/rain-day.png" alt="rain-day" width="36px" class="icon-weather-forecast">
+          <div class="weather-forecast-temp">
+            <span class="forecast-max">16°</span>
+            <span class="forecast-min">13°</span>
+          </div>
+        </div>
+        </div></div>
+          </div>
+        </div>
     <small id="coded-by">
           <a
             href="https://github.com/themightyvicki1/shecodes-plus-project"
