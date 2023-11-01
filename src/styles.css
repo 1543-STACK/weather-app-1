@@ -17,7 +17,7 @@ ul {
 }
 
 small {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +29,7 @@ small {
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 4px;
+  border-radius: px;
 }
 
 .temperature-display img {

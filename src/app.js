@@ -50,7 +50,7 @@ function displayForecast(response) {
           <img
             src="${forecastDay.condition.icon_url}"
             alt="${forecastDay.condition.icon}"
-            width="36px"
+            width="40px"
             class="icon-weather-forecast"
           />
           <div class="weather-forecast-temp">
@@ -92,7 +92,7 @@ function displayTemperature(response) {
     descriptionCol === "few clouds" ||
     descriptionCol === "scattered clouds"
   ) {
-    weatherApp.style.backgroundColor = "rgb(95, 209, 249, 0.8)";
+    weatherApp.style.backgroundColor = "rgb(blueviolet)";
   } else if (descriptionCol === "light rain" || descriptionCol === "rain") {
     weatherApp.style.backgroundColor = "rgba(5, 111, 146, 0.5)";
   } else {
