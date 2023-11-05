@@ -28,7 +28,7 @@ small {
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 7px solid #dadde1;
   border-radius: px;
 }
 
@@ -123,6 +123,7 @@ small {
   text-align: center;
   margin-top: 20px;
   font-size: 16px;
+  color: #dadde1;
 }
 
 .weather-forecast-temp {
